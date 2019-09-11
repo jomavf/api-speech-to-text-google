@@ -12,6 +12,12 @@ app.use(bodyParser.json({
 
 app.use(cors())
 
+app.get('/',(req,res)=>{
+    return res.status(200).json({
+        result: 'success'
+    })
+})
+
 app.post('/',async (req,res)=>{
     let result = await getAudio(req.body.data)
     console.log('resultado', result)
