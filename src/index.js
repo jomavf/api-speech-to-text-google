@@ -24,6 +24,8 @@ app.post('/',async (req,res)=>{
     return res.status(200).json({ result })
 })
 
-app.listen(8000, () => {
+const port = process.env.PORT
+
+app.listen(8000 || port, () => {
     console.log('Listening on port 8000',process.env.GOOGLE_APPLICATION_CREDENTIALS)
 })
