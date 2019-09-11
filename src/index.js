@@ -2,6 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
+require('dotenv').config()
+
 const getAudio = require('./api/stt-api')
 const app = express()
 
@@ -26,6 +28,6 @@ app.post('/',async (req,res)=>{
 
 const port = process.env.PORT
 
-app.listen(8000 || port, () => {
-    console.log('Listening on port 8000',process.env.GOOGLE_APPLICATION_CREDENTIALS)
+app.listen(port, () => {
+    console.log(`Listening on port ${process.env.PORT}`,process.env.GOOGLE_APPLICATION_CREDENTIALS)
 })
