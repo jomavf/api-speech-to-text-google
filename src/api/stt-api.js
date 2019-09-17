@@ -10,7 +10,7 @@ let getAudio = async (data) => {
     const config = {
         encoding: 'LINEAR16',
         // sampleRateHertz: 48000, // Averiguar esto
-        languageCode: 'en-US',
+        languageCode: 'es-pe',
     };
 
     const request = {
